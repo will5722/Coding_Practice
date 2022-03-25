@@ -15,8 +15,12 @@ import sys
 
 def plusMinus(arr):
     # Write your code here
+    # Set counts to 0.
     pos, zero, neg = 0, 0, 0
     
+    # Loop through the array, check if number is positive and add 1 to positive count.
+    # If negative add one to negative count.
+    # Any other number must be zero, add 1 to zero count.
     for num in arr:
         if num > 0:
             pos += 1
@@ -25,6 +29,7 @@ def plusMinus(arr):
         else:
             zero += 1
 
+    # Print results, dived by the length of the array for the ratio, round to 6 places.
     print(round((pos/len(arr)), 6))
     print(round((neg/len(arr)), 6))
     print(round((zero/len(arr)), 6))
